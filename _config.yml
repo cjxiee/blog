@@ -1,8 +1,8 @@
-title: Yizheng's Blog
-author: Yizheng Huang
-email: huangyz0918@gmail.com
+title: Shijie's Blog
+author: Shijie Xie
+email: xxshijie@seas.upenn.edu
 description: Hard work always pays off.
-url: "http://blog.huangyz.name/" 
+url: "https://cjxiee.github.io/blog/" 
 
 # Build settings
 remote_theme: huangyz0918/moving
@@ -16,7 +16,7 @@ moving:
   back_to: "Index"
   social_links:
     rss: RSS
-    github:  huangyz0918
-    facebook: huangyz0918
-    linkedin: yizheng-huang
+    github:  cjxiee
+    instagram: lylamxxsj
+    linkedin: Shijie Xie
 
