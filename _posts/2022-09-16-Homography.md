@@ -1,4 +1,9 @@
-## Homography cooridnate in the computer vision
+---
+layout: post
+title: "Homography cooridnate in the computer vision"
+categories: study
+author: "Shijie Xie"
+---
 Homogenous Coordinates are a system of coordinates used in the projective space. 
 
 The projective space can be imagined as a plane located at Z = 1 in the 3D space.
