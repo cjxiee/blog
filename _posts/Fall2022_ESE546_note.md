@@ -18,3 +18,20 @@ Usually, given a trained model, we want to modify the inputs to misguide the tra
 3. Compute loss and call *.backward()*.
 4. Update the inputs by the gradient information from autograd.
 5. Repeat the process several times so that the adversarial sample could change the network's original prediction.
+
+
+
+# Freeze data!!!
+In a NN, parameters that don’t compute gradients are usually called frozen parameters. It is useful to “freeze” part of your model if you know in advance that you won’t need the gradients of those parameters (this offers some performance benefits by reducing autograd computations).
+
+Another common usecase where exclusion from the differentiation is important is for finetuning a pretrained network.
+
+In finetuning, we freeze most of the model and typically only modify the classifier layers to make predictions on new labels. Let’s walk through a small example to demonstrate this. As before, we load a pretrained resnet18 model, and freeze all the parameters.
+
+    from torch import nn, optim
+
+    model = torchvision.models.resnet18(pretrained=True)
+
+    # Freeze all the parameters in the network
+    for param in model.parameters():
+        param.requires_grad = False
