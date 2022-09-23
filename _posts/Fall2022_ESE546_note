@@ -6,3 +6,15 @@ PyTorch provides two types of hooks for modules:
 - **Backward hooks** are called during the backward pass.
 
 [An interesting hook example](https://towardsdatascience.com/the-one-pytorch-trick-which-you-should-know-2d5e9c1da2ca)
+
+
+## Differentiating with respect to the inputs (adversarial attack)
+When training neural networks, we need to update neural network learnable parameters, including weights, bias, and etc. In some other cases, we want to update inputs as well. One example is adversarial attack. Wrote in their paper *Adversarial Machine Learning at Scale*, Samy Bengio and etc define adversarial attack as the following.
+> Adversarial machine learning is a machine learning technique that attempts to fool models by supplying deceptive input.
+
+Usually, given a trained model, we want to modify the inputs to misguide the trained model. In order to accomplish this, we need to do the following steps:
+1. Set input data as *requires_grad = True*.
+2. Forward pass the input into the trained neural network.
+3. Compute loss and call *.backward()*.
+4. Update the inputs by the gradient information from autograd.
+5. Repeat the process several times so that the adversarial sample could change the network's original prediction.
