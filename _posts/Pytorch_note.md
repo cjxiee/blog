@@ -76,6 +76,13 @@ n. Using Gpu to perform the calculation
     # Get cpu or gpu device for training.
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("Using {} device".format(device))
+    
+n. **Save model**
+    
+    torch.save(net.stat_dict(), "net.pt")
+    
+    new_net = Neuralnetwork()
+    new_net.load_state_dict(torch.load("net.pt"))
 
 
 ## dtype issues
