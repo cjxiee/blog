@@ -1,0 +1,8 @@
+## 2.5 Module Hooks (Advanced topic but very useful!)
+In Neural Network Training with Modules, we demonstrated the training process for a module, which iteratively performs forward and backward passes, updating module parameters each iteration. For more control over this process, PyTorch provides “hooks” that can perform arbitrary computation during a forward or backward pass, even modifying how the pass is done if desired. Some useful examples for this functionality include debugging, visualizing activations, examining gradients in-depth, etc. Hooks can be added to modules you haven’t written yourself, meaning this functionality can be applied to third-party or PyTorch-provided modules.
+
+PyTorch provides two types of hooks for modules:
+- **Forward hooks** are called during the forward pass. 
+- **Backward hooks** are called during the backward pass.
+
+[An interesting hook example](https://towardsdatascience.com/the-one-pytorch-trick-which-you-should-know-2d5e9c1da2ca)
