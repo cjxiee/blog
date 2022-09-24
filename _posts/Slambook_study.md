@@ -46,4 +46,11 @@
 
     只要有头文件和库文件来生成一个库，再将这些文件连接到可执行文件
     
+    
+    
+#### Using Vscode 
+Remember to include the linked lib or cpp direction in the "tasks.json" file
+        
+        "${workspaceFolder}/*.cpp"
+        "${fileDirname}/*.cpp"
    
