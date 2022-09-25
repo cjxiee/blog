@@ -54,3 +54,11 @@ Remember to include the linked lib or cpp direction in the "tasks.json" file
         "${workspaceFolder}/*.cpp"
         "${fileDirname}/*.cpp"
    
+   
+   
+## Lec2
+### Install Sophus lib
+Check this url https://blog.csdn.net/weixin_44684139/article/details/104803225?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4-104803225-blog-116547361.pc_relevant_multi_platform_whitelistv4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4-104803225-blog-116547361.pc_relevant_multi_platform_whitelistv4&utm_relevant_index=5 for reference.
+
+Install fmt and then Sophus
+    
