@@ -10,3 +10,9 @@ For example, on the command line you would enter the following:
 Username: your_username
 
 Password: **your_token**
+
+
+# Clone a repo with linked repo
+
+    git clone --recursive ...
+    
