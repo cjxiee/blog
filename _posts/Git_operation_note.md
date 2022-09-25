@@ -1,4 +1,4 @@
-# Fix the error of removed support for password authentication of git remote
+### Fix the error of removed support for password authentication of git remote
 
 Generate a token for repo.
 
@@ -11,8 +11,14 @@ Username: your_username
 
 Password: **your_token**
 
+### To fix issues of entering username and password everytime git push
 
-# Clone a repo with linked repo
+    $ set the remote origin as ssh
+    $ git remote set-url origin "ssh link" 
+    $ git push -u origin main
+
+### Clone a repo with linked repo
 
     git clone --recursive ...
     
+   
