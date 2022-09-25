@@ -22,3 +22,7 @@ Password: **your_token**
     git clone --recursive ...
     
    
+### Note: make install
+    
+    sudo make install       # install the lib to the default system path
+    sudo make uninstall     # remove the installed lib
