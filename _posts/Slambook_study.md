@@ -67,4 +67,6 @@ Install fmt and then Sophus
     原因：其中引用的sigslot/signal.hpp是基于C++14标准的，而原CMakeLists.txt中的设置的标准为C++11。
     
     
-    
+### fix <Eigen/Core> error
+
+    sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
