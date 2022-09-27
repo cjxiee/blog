@@ -82,7 +82,10 @@ Install fmt and then Sophus
     
 ###  CMakeFiles.txt some notes
 Check this link https://stackoverflow.com/questions/43456982/cmake-what-is-the-difference-between-include-directories-versus-target-link
-     if we include the directies, it will be unnecessary to link the lib
+Unless a library is a header-only library, call to target_link_libraries is required for use it.
+
+     if we include the directies, it will be unnecessary to link the lib:
+     
      include_directories(${Sophus_INCLUDE_DIRS})
      
      instead of
