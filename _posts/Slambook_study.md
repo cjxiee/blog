@@ -70,3 +70,21 @@ Install fmt and then Sophus
 ### fix <Eigen/Core> error
 
     sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
+    
+    
+## Lec3
+###  Issue: fmt is not linked
+
+    fmt package has been used in Sophus, so in fmt should be linked to the executable file in the CMakefile.txt
+    
+    find_package(fmt REQUIRED)
+    target_link_libraries(xxxxxx fmt::fmt)
+    
+###  CMakeFiles.txt some notes
+    
+     if we include the directies, it will be unnecessary to link the lib
+     include_directories(${Sophus_INCLUDE_DIRS})
+     
+     instead of
+     
+     target_link_libraries(${Sophus_INCLUDE_LIBRARIES}(Sphous::Sphous))
