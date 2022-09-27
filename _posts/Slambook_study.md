@@ -102,12 +102,12 @@ Unless a library is a header-only library, call to target_link_libraries is requ
     }
     
 ### Point Cloud
+When the intrinsic and extrinsic parameters are provided, it is easy to reconstruct the 3D point cloud.
     
-    When the intrinsic and extrinsic parameters are provided, it is easy to reconstruct the 3D point cloud.
+Known: color image, depth image and carmera pose of each image being taken.
     
-    Known: color image, depth image and carmera pose of each image being taken.
-    
-    Convert the location of pixel in the image plane to the location in the 3D world, using the knowledge of intrinsic parameters(fx, fy, cu, cv) and depth of each pixel. Store the each point within a 6D vector including position and color infomation. Iterate over all pixel and then point cloud can be easily plotted. Here is a sample image from slambook2/ch5.
+Convert the location of pixel in the image plane to the location in the 3D world, using the knowledge of intrinsic parameters(fx, fy, cu, cv) and depth of each pixel. 
+Store the each point within a 6D vector including position and color infomation. Iterate over all pixel and then point cloud can be easily plotted. Here is a sample image from slambook2/ch5.
 
 ![image](https://user-images.githubusercontent.com/89954165/192652492-e1326f41-428f-42a4-aebd-29ed40b2e4ed.png)
     
