@@ -100,3 +100,16 @@ Unless a library is a header-only library, call to target_link_libraries is requ
     for(int i =0; i<3; i++){
         x[i] = new int[4];
     }
+    
+### Point Cloud
+    
+    When the intrinsic and extrinsic parameters are provided, it is easy to reconstruct the 3D point cloud.
+    
+    Known: color image, depth image and carmera pose of each image being taken.
+    
+    Convert the location of pixel in the image plane to the location in the 3D world, using the knowledge of intrinsic parameters(fx, fy, cu, cv) and depth of each pixel. Store the each point within a 6D vector including position and color infomation. Iterate over all pixel and then point cloud can be easily plotted. Here is a sample image from slambook2/ch5.
+
+file:///home/cjxie/Desktop/Screenshot%20from%202022-09-28%2006-43-07.png
+
+    
+#### Exist Issue: noise of depth measurement 
