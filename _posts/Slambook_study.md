@@ -109,7 +109,6 @@ Unless a library is a header-only library, call to target_link_libraries is requ
     
     Convert the location of pixel in the image plane to the location in the 3D world, using the knowledge of intrinsic parameters(fx, fy, cu, cv) and depth of each pixel. Store the each point within a 6D vector including position and color infomation. Iterate over all pixel and then point cloud can be easily plotted. Here is a sample image from slambook2/ch5.
 
-file:///home/cjxie/Desktop/Screenshot%20from%202022-09-28%2006-43-07.png
-
+![image](https://user-images.githubusercontent.com/89954165/192652492-e1326f41-428f-42a4-aebd-29ed40b2e4ed.png)
     
 #### Exist Issue: noise of depth measurement 
