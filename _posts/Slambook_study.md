@@ -91,3 +91,12 @@ Unless a library is a header-only library, call to target_link_libraries is requ
      instead of
      
      target_link_libraries(${Sophus_INCLUDE_LIBRARIES}(Sphous::Sphous))
+     
+## Lec4
+###  Some notes about c++:
+    
+    #### understand the structure of image in c++
+    int **x = new int*[3];     // x store the address of the head pointer of each row
+    for(int i =0; i<3; i++){
+        x[i] = new int[4];
+    }
