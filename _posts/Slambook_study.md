@@ -112,3 +112,74 @@ Store the each point within a 6D vector including position and color infomation.
 ![image](https://user-images.githubusercontent.com/89954165/192652492-e1326f41-428f-42a4-aebd-29ed40b2e4ed.png)
     
 #### Exist Issue: noise of depth measurement 
+
+
+
+## Lec5 Ceres & g2o
+### using Ceres
+    
+    #include<iostream>
+    #include<ceres/ceres.h>
+    #include<opencv2/core/core.hpp>
+
+    using namespace std;
+    using ceres::exp;
+    using ceres::Problem;
+    using ceres::Solver;
+    using ceres::Solve;
+    using ceres::AutoDiffCostFunction;
+
+
+
+    struct ExpResidual{
+        ExpResidual(double x, double y) : _x(x), _y(y) {}
+
+        template<typename T>
+        bool operator()(const T*const a, const T*const b, const T*const c, T*residual) const{
+            residual[0] = _y -  exp(a[0] * _x * _x + b[0] * _x + c[0]); // y- epx(ax^2 + bx + c)
+            return true;
+        }
+
+        const double _x, _y;   //定义数据
+    };
+
+    int main(int argc, char**argv){
+
+        double ar = 1.0, br = 2.0, cr = 1.0;      // real abc
+        double ae = 0, be = 0, ce = 0;     // initial guess abc
+        int N = 100;                              // data number
+        double w_sigma = 1.0;                     // noise
+        // double inv_sigma = 1.0 / w_sigma;
+
+        // generate sample data points with noise
+        cv::RNG rng;
+        vector<double> x_data, y_data;
+        for (int i = 0 ; i<N; i++){
+            double x = i/ 100.0;
+            x_data.push_back(x);
+            y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma));
+        }
+
+        // define the problem
+        Problem problem;
+        for (int i = 0 ; i<N; i++){
+            problem.AddResidualBlock(
+            // add auto differential take the residual function as inputs
+                new AutoDiffCostFunction<ExpResidual,1,1,1,1>(
+                    new ExpResidual(x_data[i], y_data[i])),
+            nullptr,
+            &ae, &be, &ce);           
+        }
+
+        Solver::Options options;            // define solver
+        options.linear_solver_type = ceres::DENSE_NORMAL_CHOLESKY;   //
+        options.minimizer_progress_to_stdout = true;
+        Solver::Summary summary;            // result info
+        Solve(options, &problem, &summary); // run optimization
+
+        // result
+        cout<<summary.BriefReport()<<endl;
+        cout<<"ae ->"<<ae<<" be ->"<<be<<" ce ->"<<ce<<endl;
+
+        return 0;
+    }
