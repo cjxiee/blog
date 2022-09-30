@@ -66,3 +66,6 @@ pixels), and the relative error is too big to guarantee precise calibration.
 
 
 ### P3P
+  P3P方法是众多解决PnP问题中的一种方案，是通过已知的3对精准匹配的2D-3D点求解图像间相对的位姿变换的一种方法，所用到的信息较少。我们首先需要知道的是P3P并不是直接根据2D-3D点求出相机位姿矩阵，而是先求出对应的2D点在当前相机坐标系下的3D坐标，然后根据世界坐标系下的3D坐标和当前相机坐标系下的3D坐标通过ICP信息求解相机位姿的。
+
+  这段话来自：https://blog.csdn.net/ABC1225741797/article/details/108066505
