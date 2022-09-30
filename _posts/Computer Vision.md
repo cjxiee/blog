@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Homography cooridnate in the computer vision"
+title: "CIS580 computer vision"
 categories: study
 author: "Shijie Xie"
 ---
