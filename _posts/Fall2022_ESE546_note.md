@@ -35,3 +35,10 @@ In finetuning, we freeze most of the model and typically only modify the classif
     # Freeze all the parameters in the network
     for param in model.parameters():
         param.requires_grad = False
+
+
+
+## Batch norm
+The basic idea is to learn to two sets of parameters to control the distribution of data.
+
+Check this for ref: https://blog.paperspace.com/busting-the-myths-about-batch-normalization/
