@@ -19,5 +19,11 @@ With this feature enabled, Windows don't really shut down the entire system, but
   
 ##### ❌nvidia-settings won't start: "Unable to find display on any available systems"
 
-  sudo ubuntn-drivers devices
-  sudo ubuntn-drivers autoinstall
+      sudo ubuntn-drivers devices
+      sudo ubuntn-drivers autoinstall
+      
+      sudo prime-select nvidia # 切换nvidia显卡
+      sudo prime-select intel  # 切换intel显卡
+      sudo prime-select query  # 查看当前使用的显卡
+
+for ref: https://blog.csdn.net/wf19930209/article/details/81877822
