@@ -27,3 +27,14 @@ With this feature enabled, Windows don't really shut down the entire system, but
       sudo prime-select query  # 查看当前使用的显卡
 
 for ref: https://blog.csdn.net/wf19930209/article/details/81877822
+
+
+
+#### use autoinstall to upgrade the driver
+        
+        sudo ubuntn-drivers autoinstall
+        
+        #check if novueau is working
+        lsmod | grep nouveau
+
+for ref:https://blog.csdn.net/u012386311/article/details/103402428?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-103402428-blog-82626538.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-103402428-blog-82626538.pc_relevant_default&utm_relevant_index=1
