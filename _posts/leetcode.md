@@ -96,3 +96,15 @@
 
             if (nums[mid] == target) {r护额
             if (nums[mid] == target) {
+
+### Day8
+#### 二叉堆 （优先级队列） 多链表排序， 寻找最值
+  
+    23. 合并 K 个升序链表   链表中的值加入优先级队列 重新链接
+    373. 查找和最小的 K 对数字  虽然是两个组数进行数对排序 但可以抽象成多个链表排序的问题  如 以第一个数组的值为第一个值的多条链表。 ***
+    378. 有序矩阵中第 K 小的元素 同上
+    215. 数组中的第 K 个最大元素 维护一个size 为k的最小二叉堆 最后会留下k个最大值
+    313. 超级丑数.  维护prime的链表 和丑数的链表， （ugly[index] *prime, prime, index+1) 每次pop出一个最小值 然后把对应链表prime上的下一个 丑数值添加入heapq
+    <img width="704" alt="image" src="https://user-images.githubusercontent.com/89954165/195712845-6450b1fd-8b63-461f-910f-1fdf86622e12.png">
+
+
