@@ -117,3 +117,44 @@
     295. 数据流的中位数 大小顶堆 前一半数据在大顶堆里，
       
 
+### Day9
+#### 二叉树    遍历or递归 与子树相关后序遍历 
+**二叉树的前中后序**
+<img width="1041" alt="image" src="https://user-images.githubusercontent.com/89954165/195912687-c556797d-ffa6-4e90-8e0f-3a84d234a97b.png">
+**解法**
+二叉树题目的递归解法可以分两类思路，第一类是遍历一遍二叉树得出答案，第二类是通过分解问题计算出答案，这两类思路分别对应着 回溯算法核心框架 和 动态规划核心框架。
+
+
+
+
+#### dp
+
+  1. 重叠子问题
+  2. 状态转移方程
+  3. 最优子结构
+  
+  套路
+  1.明确 状态
+  2.明确 选择   应用递归进行选择
+  3.明确 dp函数
+  4.明确 base case
+
+  <img width="937" alt="image" src="https://user-images.githubusercontent.com/89954165/195922746-2c8bbf02-5d9a-422b-b59a-fd51c13f51a9.png">
+
+
+#### 回溯算法
+    穷举
+    
+    res = []
+    def backtrack(self, track, list):
+      if (end condition):
+        res.add(track)
+        return
+      for i in list:
+        # make decision
+
+        backtrack(track, list)
+        # undo decision
+      
+    
+    
