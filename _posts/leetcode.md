@@ -113,5 +113,7 @@
     
     451. 根据字符出现频率排序 字典排序 提取key 对key进行排序 
       list(freq.keys()).sort(key = lambda x: -freq[x]) #根据value对key进行降序排列
+    703. 数据流中的第 K 大元素
+    295. 数据流的中位数 大小顶堆 前一半数据在大顶堆里，
       
 
