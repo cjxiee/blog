@@ -157,4 +157,13 @@
         # undo decision
       
     
+### Day10
+#### NIO 笔试
     
+    矩阵转至 暴力解 两个for loop
+    牛牛函数 求二进制下最小的1 x & -x
+    
+#### ROBOTSENSE 笔试
+    
+    堆箱子 dp问题    对箱子排序 dp[i] --i对应每个箱子   两个for loop 用于更新 i箱子可以堆的最大高度
+
