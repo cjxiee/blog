@@ -82,3 +82,45 @@ We can estimate the camera pose from an AprilTag based on homog- raphy estimatio
   ![191664565089_ pic](https://user-images.githubusercontent.com/89954165/193340646-9aa95a39-63aa-40c3-937b-87bd9de9d69a.jpg)
 
 
+
+### Midterm review
+
+#### PnP vs. SfM
+  
+    PnP: We know the 2D -> 3D coordniate pairs, calibrated coordinates and world coordinates. 
+    Structure from Motion: only two calibrated coordinates of the same 3D point. 4 unknowns: R, T \lambda and \niu
+    
+<img width="793" alt="image" src="https://user-images.githubusercontent.com/89954165/197595309-f8bbe79c-912a-4e19-a133-6dd943268ef6.png">
+
+    
+#### Epipolar Constraint
+    Remove the depth from constraint
+
+    
+<img width="837" alt="image" src="https://user-images.githubusercontent.com/89954165/197596814-5185fb82-8fda-4efa-ab45-596fcdf88299.png">
+
+#### Essential Matrix E
+    
+    Solve E with 8 point correspondences
+
+<img width="830" alt="image" src="https://user-images.githubusercontent.com/89954165/197598129-584fa305-287a-46f1-8b75-130da188b91a.png">
+
+<img width="833" alt="image" src="https://user-images.githubusercontent.com/89954165/197602513-0aeb0aa5-3fd8-45c0-8fbd-571904687f33.png">
+
+<img width="839" alt="image" src="https://user-images.githubusercontent.com/89954165/197602714-418d924d-4d7c-4354-ba2e-7369ddc480ff.png">
+
+
+
+    𝐸 is a singular matrix (Because 𝐸 = #𝑇𝑅, and det #𝑇 = 0)
+     So smallest singular value is indeed zero!
+     So, 𝜎1(𝐸) = 𝜎2(𝐸) = ||𝑇|| and 𝜎3 𝐸 = 0
+    Side note: the ‘third singular vector’ of 𝐸 (null vector because 𝜎!= 0) is nothing but 
+    the translation vector 𝑇 because:
+    𝐸𝐸"𝑇 = -𝑇-𝑇"𝑇 = 𝑇× −𝑇×𝑇 = 0!
+    So we already know 𝑻 in terms of 𝑬! (the 3rd left singular vector of 𝑬)
+    
+    
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/89954165/197608922-be3216a8-62e9-4493-a595-3b90d1607f48.png">
+
+
+
