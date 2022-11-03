@@ -81,6 +81,9 @@ We can estimate the camera pose from an AprilTag based on homog- raphy estimatio
   
   ![191664565089_ pic](https://user-images.githubusercontent.com/89954165/193340646-9aa95a39-63aa-40c3-937b-87bd9de9d69a.jpg)
 
+#### Projective Transformation, Affine transfomration, and Perspective Transformation
+
+<img width="654" alt="image" src="https://user-images.githubusercontent.com/89954165/199633659-c172c19d-d8b7-4c7e-8c5d-2ea99162f905.png">
 
 
 ### Midterm review
