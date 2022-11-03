@@ -95,13 +95,16 @@ We can estimate the camera pose from an AprilTag based on homog- raphy estimatio
     
 #### Epipolar Constraint
     Remove the depth from constraint
-
     
 <img width="837" alt="image" src="https://user-images.githubusercontent.com/89954165/197596814-5185fb82-8fda-4efa-ab45-596fcdf88299.png">
 
 #### Essential Matrix E
 The essential matrix encodes epipolar geometry. Given a point in one image, multiplying by the essential matrix will tell us the epipolar line in the second view, Ep = l_{q}
-### Understanding of Epipolar Constraint
+
+##### Essential Matrix vs Homography
+Homography maps a point ot a point (projective transformation).
+Essential matrix maps a point to a line (perspective transformation).
+#### Understanding of Epipolar Constraint
 <img width="855" alt="image" src="https://user-images.githubusercontent.com/89954165/199632364-829e29de-afc3-4bad-94b9-d8b71179b459.png">
 
 
