@@ -100,7 +100,11 @@ We can estimate the camera pose from an AprilTag based on homog- raphy estimatio
 <img width="837" alt="image" src="https://user-images.githubusercontent.com/89954165/197596814-5185fb82-8fda-4efa-ab45-596fcdf88299.png">
 
 #### Essential Matrix E
-    
+The essential matrix encodes epipolar geometry. Given a point in one image, multiplying by the essential matrix will tell us the epipolar line in the second view, Ep = l_{q}
+### Understanding of Epipolar Constraint
+<img width="855" alt="image" src="https://user-images.githubusercontent.com/89954165/199632364-829e29de-afc3-4bad-94b9-d8b71179b459.png">
+
+
     Solve E with 8 point correspondences
 
 <img width="830" alt="image" src="https://user-images.githubusercontent.com/89954165/197598129-584fa305-287a-46f1-8b75-130da188b91a.png">
