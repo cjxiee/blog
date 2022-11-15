@@ -135,3 +135,29 @@ Essential matrix maps a point to a line (perspective transformation).
 
 
 
+### Optical flow
+    The motion of each pixel in between two frames is called optical flow
+    Note: we are not showing correspondences for every pixel
+    
+    Optical Flow Over Patches: Let’s match small local regions (“patches”) between the two images.
+    (Assumption: All pixels within a patch move in the same way
+![image](https://user-images.githubusercontent.com/89954165/201974761-b61d4199-07ed-4dd0-884f-58a2956f6695.png)
+![image](https://user-images.githubusercontent.com/89954165/201974821-1b5c8c1d-98f7-48c3-a83f-a3e75d7b01f1.png)
+![image](https://user-images.githubusercontent.com/89954165/201976230-f4ecdfb3-315e-45e5-ad69-2a5e62f9d391.png)
+#### Assumptions:
+![image](https://user-images.githubusercontent.com/89954165/201980697-31e6a0fd-cd86-4ec2-9bca-94ab7ed781a2.png)
+#### Issue:
+![image](https://user-images.githubusercontent.com/89954165/201982441-f180865b-f234-4697-a868-c27e8fcceaec.png)
+![image](https://user-images.githubusercontent.com/89954165/201983195-e6ba62e3-c4ce-4f41-8fec-1f693a28ee7d.png)
+![image](https://user-images.githubusercontent.com/89954165/201983473-aea2c2ca-d51b-4b28-a1ab-8d5e220f0a43.png)
+![image](https://user-images.githubusercontent.com/89954165/201984388-7d8e184b-a5d8-4e9c-9728-07ba3c6eebf1.png)
+![image](https://user-images.githubusercontent.com/89954165/202001909-9f27aa64-ba1c-4d47-9a8f-9f674f2406ce.png)
+![image](https://user-images.githubusercontent.com/89954165/202002337-157abedb-6976-436b-b514-2e6e56e476cb.png)
+
+
+
+
+
+
+   
+    
