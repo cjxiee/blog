@@ -158,6 +158,10 @@ Essential matrix maps a point to a line (perspective transformation).
 
 
 
+### RANSAC
+<img width="1057" alt="image" src="https://user-images.githubusercontent.com/89954165/203155416-1dec15cd-5936-48b6-9500-eade71d0c3ac.png">
+
+<img width="1180" alt="image" src="https://user-images.githubusercontent.com/89954165/203155373-a5cf1213-6dd9-46c5-8e4d-65c5f8ae7709.png">
 
    
     
