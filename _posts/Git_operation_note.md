@@ -12,7 +12,7 @@ Username: your_username
 Password: **your_token**
 
     #### try GitCredential Manager
-        <img width="881" alt="image" src="https://user-images.githubusercontent.com/89954165/198305903-8866c66c-34fa-465d-8b47-b070c2896889.png">
+<img width="881" alt="image" src="https://user-images.githubusercontent.com/89954165/198305903-8866c66c-34fa-465d-8b47-b070c2896889.png">
 
 
 ### To fix issues of entering username and password everytime git push
